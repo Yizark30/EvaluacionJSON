@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="30dp"
         android:textSize="30sp"
-        android:text="API DE PRUEBA "/>
+        android:text="INICIO "/>
 
 
     <Button

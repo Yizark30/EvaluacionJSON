@@ -30,6 +30,7 @@ class InsertFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentInsertBinding.inflate(inflater, container, false)
+
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -40,6 +41,8 @@ class InsertFragment : Fragment() {
         txtTitulo = binding.txtTitulo
         txtEmail = binding.txtEmail
         txtFacultad = binding.txtFacultad
+        resetText()
+
 
     binding.btnGuardar.setOnClickListener() {
         val url = "http://192.168.1.7/metodos/insertarCoord.php"
@@ -49,7 +52,7 @@ class InsertFragment : Fragment() {
             Response.Listener<String> { response ->
                 Toast.makeText(
                     getActivity(),
-                    "Usuario ha sido insertado existosamente",
+                    "Insertado existosamente",
                     Toast.LENGTH_LONG
                 ).show()
             }, Response.ErrorListener { error ->
@@ -71,6 +74,21 @@ class InsertFragment : Fragment() {
         queue.add(resultadoPost)
     }
 }
+
+    private fun resetText() {
+        with(binding) {
+            btnLimpiar.setOnClickListener {
+                txtNombres.setText("")
+                txtApellidos.setText("")
+                txtFechaNac.setText("")
+                txtTitulo.setText("")
+                txtEmail.setText("")
+                txtFacultad.setText("")
+                Toast.makeText(context,"Campos Limpios",Toast.LENGTH_SHORT).show()
+            }
+
+        }
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()
