@@ -16,11 +16,11 @@ import com.example.evaluacionjson.Adapter.UserAdapter
 import com.example.evaluacionjson.Adapter.UserData
 import com.example.evaluacionjson.databinding.FragmentViewBinding
 
-class ViewFragment : Fragment() {
+class View60Fragment : Fragment() {
     private var _binding: FragmentViewBinding? = null
     private val binding get() = _binding!!
     val userList = arrayListOf<UserData>()
-    val uri = "http://192.168.1.7/metodos/mostrarData.php"
+    val uri = "http://192.168.1.7/metodos/See60.php"
     var recycleView: RecyclerView? = null
 
 
@@ -75,3 +75,4 @@ class ViewFragment : Fragment() {
         _binding = null
     }
 }
+

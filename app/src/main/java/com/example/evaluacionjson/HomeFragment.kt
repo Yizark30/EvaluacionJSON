@@ -31,6 +31,14 @@ class HomeFragment : Fragment() {
         binding.btnMostrar.setOnClickListener(){
             it.findNavController().navigate(R.id.hometoview)
         }
+
+        binding.btnEditar.setOnClickListener {
+            it.findNavController().navigate(R.id.homeEditar)
+        }
+        binding.btnMostrar60.setOnClickListener {
+            it.findNavController().navigate(R.id.hometoview60)
+        }
+
     }
     override fun onDestroyView() {
         super.onDestroyView()

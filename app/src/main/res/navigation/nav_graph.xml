@@ -15,6 +15,15 @@
         <action
             android:id="@+id/hometoview"
             app:destination="@id/viewFragment" />
+        <action
+            android:id="@+id/action_home2_to_fragment_editar"
+            app:destination="@id/editarFragment" />
+        <action
+            android:id="@+id/homeEditar"
+            app:destination="@id/editarFragment" />
+        <action
+            android:id="@+id/hometoview60"
+            app:destination="@id/view60Fragment" />
     </fragment>
     <fragment
         android:id="@+id/insertFragment"
@@ -26,4 +35,14 @@
         android:name="com.example.evaluacionjson.ViewFragment"
         android:label="fragment_view"
         tools:layout="@layout/fragment_view" />
+    <fragment
+        android:id="@+id/editarFragment"
+        android:name="com.example.evaluacionjson.editarFragment"
+        android:label="fragment_editar"
+        tools:layout="@layout/fragment_editar" />
+    <fragment
+        android:id="@+id/view60Fragment"
+        android:name="com.example.evaluacionjson.View60Fragment"
+        android:label="fragment_view60"
+        tools:layout="@layout/fragment_view60" />
 </navigation>
